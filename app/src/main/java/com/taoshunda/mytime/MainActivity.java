@@ -79,4 +79,33 @@ public class MainActivity extends AppCompatActivity implements OnDateSetListener
         Date d = new Date(time);
         return sf.format(d);
     }
+
+    /**
+     * long tenYears = 10L * 365 * 1000 * 60 * 60 * 24L;
+     TimePickerDialog mDialogAll = new TimePickerDialog.Builder()
+     .setCallBack(this)//回调
+     .setCancelStringId("Cancel")//取消按钮
+     .setSureStringId("Sure")//确定按钮
+     .setTitleStringId("TimePicker")//标题
+     .setYearText("Year")//Year
+     .setMonthText("Month")//Month
+     .setDayText("Day")//Day
+     .setHourText("Hour")//Hour
+     .setMinuteText("Minute")//Minute
+     .setCyclic(false)//是否可循环
+     .setMinMillseconds(System.currentTimeMillis())//最小日期和时间
+     .setMaxMillseconds(System.currentTimeMillis() + tenYears)//最大日期和时间
+     .setCurrentMillseconds(System.currentTimeMillis())
+     .setThemeColor(getResources().getColor(R.color.timepicker_dialog_bg))
+     .setType(Type.ALL)//类型
+     .setWheelItemTextNormalColor(getResources().getColor(R.color.timetimepicker_default_text_color))//未选中的文本颜色
+     .setWheelItemTextSelectorColor(getResources().getColor(R.color.timepicker_toolbar_bg))//当前文本颜色
+     .setWheelItemTextSize(12)//字体大小
+     .build();
+
+     mDialogAll.show(getSupportFragmentManager(), "ALL");
+     */
+
+
+
 }
